@@ -6,6 +6,8 @@ import (
 )
 
 func main() {
-	options := cmd.Init()
-	scan.Scan(options)
+	options, run := cmd.Init()
+	if run {
+		scan.Scan(options)
+	}
 }

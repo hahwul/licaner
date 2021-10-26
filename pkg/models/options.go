@@ -1,5 +1,11 @@
 package options
 
 type Options struct {
-	Pipe bool
+	Pipeline       bool
+	URL            string
+	URLsFile       string
+	RawFile        string
+	Format         string
+	Output         string
+	NoCacheBusting bool
 }
