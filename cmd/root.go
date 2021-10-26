@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"os"
 
+	models "github.com/hahwul/licaner/pkg/models"
 	"github.com/logrusorgru/aurora"
 )
 
-func Init() {
+func Init() models.Options {
 	pipeOption := flag.Bool("pipe", false, "Use pipeline")
 	versionOption := flag.Bool("version", false, "Version of licaner")
 	_ = pipeOption
@@ -21,9 +22,15 @@ func Init() {
 
 	flag.Parse()
 
+	options := models.Options{
+		Pipe: *pipeOption,
+	}
+
 	// Show version
 	if *versionOption {
 		fmt.Println("version")
-		return
+		return options
 	}
+
+	return options
 }
