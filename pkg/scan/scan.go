@@ -1,0 +1,5 @@
+package scan
+
+func scan() {
+
+}
