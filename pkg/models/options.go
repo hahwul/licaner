@@ -1,4 +1,4 @@
-package options
+package models
 
 type Options struct {
 	Pipeline       bool
